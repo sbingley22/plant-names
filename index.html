@@ -9,30 +9,39 @@
   <body>
     <div id="main-container">
       <div id="wiki-container">
-        <iframe id="wiki-iframe" src="https://en.wikipedia.org/wiki/List_of_plants_by_common_name"></iframe>
+        <iframe 
+          id="wiki-iframe" 
+          src="https://en.wikipedia.org/wiki/List_of_plants_by_common_name"
+        ></iframe>
       </div>
       <div id="game-container">
         <div id="main-menu-container">
-          <div>
-            <h3>Quiz: </h3>
-            <button onclick="">EASY</button>
-            <button onclick="">MEDIUM</button>
-            <button onclick="">HARD</button>
+          <div id="quiz-selection">
+            <h3>Quiz Questions: </h3>
+            <div>
+              <button onclick="showQuiz(2)">5</button>
+              <button onclick="showQuiz(20)">20</button>
+              <button onclick="showQuiz(5, true)">5 New</button>
+            </div>
           </div>
           <div>
-            <button onclick="">STATS</button>
+            <button onclick="showStats()">STATS</button>
             <button onclick="showInfo()">INFO</button>
           </div>
         </div>
         <div id="quiz-container"></div>
+        <div id="stats-container">
+          <button onclick="showMainMenu()">back</button>
+        </div>
         <div id="info-container">
           <button onclick="showMainMenu()">back</button>
           <p>Learn plant names and information through quizing.</p>
-          <p>Use wikipedia to help answer questions and expand your plant knowledge</p>
+          <p>Use wikipedia to help answer questions and expand your plant knowledge.</p>
         </div>
       </div>
     </div>
 
+    <script src="./questions.js"></script>
     <script src="./script.js"></script>
   </body>
 </html>

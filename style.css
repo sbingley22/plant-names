@@ -9,6 +9,7 @@ html, body {
 
 #main-container {
   display: grid;
+  grid-template-columns: 1fr;
   grid-template-rows: 1fr 1fr;
   width: 100vw;
   height: 100vh;
@@ -31,7 +32,7 @@ html, body {
   width: 100%;
   height: 100%;
   padding: 5px;
-  background: linear-gradient(to top, #7c0, #9f5);
+  background: linear-gradient(to top, #5a0, #7f2);
 }
 
 #main-menu-container {
@@ -41,13 +42,47 @@ html, body {
   flex-direction: column;
   justify-content: space-evenly;
   align-items: center;
+  padding: 2px;
 }
 
 #main-menu-container div {
   width: 100%;
   display: flex;
+  flex-direction: column;
   justify-content: space-evenly;
   align-items: center;
+  background: rgba(255, 255, 255, 0.5);
+  padding: 5px;
+  border-radius: 5%;
+}
+
+#main-menu-container button {
+  flex-grow: 1;
+  margin: 5px 10px;
+  padding: 10px;
+  font-weight: bold;
+  font-size: 1.0rem;
+  border-radius: 10%;
+}
+
+#main-menu-container h3 {
+  flex-grow: 1;
+  margin: 10px;
+  padding: 10px;
+  font-weight: bold;
+  font-size: 1.2rem;
+  text-align: center;
+}
+
+#quiz-selection {
+  background: none;
+}
+
+#quiz-selection div {
+  padding: 5px;
+  display: flex;
+  flex-direction: row;
+  background: none;
 }
 
 #quiz-container {
@@ -55,8 +90,30 @@ html, body {
   width: 100%;
   height: 100%;
   flex-direction: column;
-  justify-content: space-evenly;
+  /*justify-content: space-evenly;*/
   align-items: center;
+  font-size: 1.2rem;
+}
+
+#quiz-container button {
+  width: 80%;
+  font-size: 1.0rem;
+  padding: 0px;
+}
+
+#quiz-form {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 8px;
+}
+
+#quiz-info {
+  padding: 5px;
+  border-radius: 5px;
+  font-weight: bold;
 }
 
 #info-container {
@@ -64,6 +121,66 @@ html, body {
   width: 100%;
   height: 100%;
   flex-direction: column;
-  justify-content: space-evenly;
-  align-items: center;
+  justify-content: center;
+  align-items: left;
+  padding: 20px;
+  margin: 0px;
+  text-align: left;
 }
+
+#info-container p {
+  background: rgba(255, 255, 255, 0.5);
+  padding: 20px;
+}
+
+#stats-container {
+  display: none;
+  width: 100%;
+  height: 100%;
+  flex-direction: column;
+  justify-content: center;
+  align-items: left;
+  padding: 20px;
+  margin: 0px;
+  text-align: left;
+}
+
+@media (min-width: 768px) {
+  #main-container {
+    grid-template-rows: 1fr;
+    grid-template-columns: 1fr 1fr;
+    overflow: hidden;
+  }
+
+  #main-menu-container {
+    padding: 20px;
+  }
+
+  #main-menu-container div {
+    flex-direction: row;
+  }
+
+  #wiki-iframe {
+    border-bottom: 0;
+    border-right: 2px solid black;
+  }
+
+  #info-container {
+    font-size: 1.6rem;
+  }
+
+  #quiz-container {
+    font-size: 1.6rem;
+  }
+
+  #quiz-container button {
+    font-size: 1.6rem;
+    padding: 8px;
+  }
+
+  #quiz-form {
+    font-size: 1.6rem;
+    gap: 15px;
+  }
+}
+
